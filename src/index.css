@@ -1,3 +1,32 @@
-.some{
-  text-transform: uppercase;
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Secular+One&display=swap');
+*  {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Heebo', sans-serif;
+  direction: rtl;
+}
+
+
+:root{
+ --main-color: #0E9D85;
+--second-color:#6B6B6B;
+--second-font: 'Secular One', sans-serif;
+--main-size-text: 24px;
+--second-size-text: 18px;
+--third-size-text: 12px;
+--main-background: #F7F7F7;
+--second-background: #0E9D85;
+--main-border: 1px solid #E8E8E8;
+--main-font-weight: 400;
+--second-font-weight: 700;
+}
+
+  a{
+    text-decoration: none;
+    color: inherit;
+  }
+
+ul{
+  list-style: none;
 }
