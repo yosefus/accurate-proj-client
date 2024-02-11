@@ -1,7 +1,8 @@
 import React from 'react'
-
-export default function Avi() {
+import MenuItem from '../../components/MenuItem'
+export default function Avi({ list = [{ txt: "", icon: "", href: "" }] }) {
   return (
-    <div>Avi</div>
+    <div>{list.map(li => <MenuItem txt={li.txt} icon={li.icon} href={li.href} key={li.txt} />)}</div>
   )
 }
+
