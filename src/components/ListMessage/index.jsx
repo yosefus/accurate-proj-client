@@ -1,16 +1,19 @@
 import React from 'react'
 import { Link, NavLink, useParams } from 'react-router-dom'
 import styles from './styles.module.css'
+
 export default function ListMessage({ listMessage }) {
-    // listMessage should get array of objs with all information about messeages 
+    // listMessage should get array of objs with all information about messeages
+    // to change date from listMessage to createContext 
     const { id } = useParams()
 
 
     return (
         <>
+
             {listMessage.map(i => {
                 return (
-                    <NavLink to={`/campaign/:${id}/messages/${i.id}`} key={i.id}>
+                    <NavLink className={styles.linkMessage} to={`/campaign/:${id}/messages/${i.id}`} key={i.id}>
 
                         <div className={styles.listMessage}>
 

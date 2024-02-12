@@ -1,5 +1,5 @@
 import React from 'react'
-import ListMessage from '../../components/ListMessage'
+import MessagePage from '../../components/MessagePage'
 export default function Israel() {
   const list = [{
     id: '1234',
@@ -28,7 +28,7 @@ export default function Israel() {
   }]
   return (
     <div>
-      <ListMessage listMessage={list} />
+      <MessagePage list={list} />
     </div>
   )
 }
