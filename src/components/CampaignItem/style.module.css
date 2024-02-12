@@ -1,0 +1,26 @@
+.CampaignItem {
+    display: flex;
+    align-items: center;
+    Height:
+        40px;
+    padding: 3px;
+    color: #6B6B6B;
+    Width:
+        100%;
+    Height:
+        43px;
+    Gap:
+        12px;
+    Font: Heebo;
+    font-Size: 18px;
+    Line-height: 21.4px;
+}
+
+
+.CampaignItem:hover {
+    color: black;
+}
+
+.CampaignItem:hover>svg>path {
+    stroke: #0E9D85;
+}
