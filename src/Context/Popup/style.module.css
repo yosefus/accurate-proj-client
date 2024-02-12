@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+dialog {
+    box-shadow: 0px 0px 100px 4px rgba(0, 0, 0, 0.2);
+    margin: auto;
+    border: none;
+}
+
+dialog::backdrop {
+    backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.2)
+}
+
+.Ptitle {
+    font-family: var(--second-font);
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.title {
+    min-width: 400px;
+    padding: 20px 32px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+    border-bottom: 1px solid #E8E8E8;
+}
+
+.closeButtsn {
+    padding: 4px;
+
+    border: none;
+    display: flex;
+    align-items: center;
+    background-color: inherit;
+}
+
+.closeButtsn:hover {
+    cursor: pointer;
+    background-color: #E8E8E8;
+    border-radius: 50%;
+}
