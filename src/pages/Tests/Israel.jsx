@@ -1,5 +1,4 @@
 import React from 'react'
-import Accordion from '../../components/Accordion'
 import MessagePage from '../MessagePage'
 export default function Israel() {
   const listRead = [{
