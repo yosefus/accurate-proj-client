@@ -6,11 +6,10 @@
 //   )
 
 import React from 'react'
-import CampaignItem from '../../components/CampaignItem'
+import LeadPage from '../LeadPage'
 
-export default function Avi({ list = { txt: "", id: "" } }) {
-  const txt = [{ txt: "gfdfhd jska lfhd sjs", id: "ghdsjs" }]
+export default function Avi() {
   return (
-    <div>{txt.map(li => <CampaignItem txt={li.txt} id={li.id} key={li.id} />)}</div>
+    <div><LeadPage /></div>
   )
 }
