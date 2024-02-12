@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, NavLink, useParams } from 'react-router-dom'
+import NewMsg from '../newMsg'
 import styles from './styles.module.css'
 export default function ListMessage({ listMessage }) {
     // listMessage should get array of objs with all information about messeages 
@@ -27,6 +28,7 @@ export default function ListMessage({ listMessage }) {
                     </NavLink>)
             })
             }
+            <div><NewMsg/></div>
         </>
     )
 }
