@@ -17,10 +17,12 @@
 }
 
 
-.CampaignItem:hover {
+.CampaignItem:hover,
+.active {
     color: black;
 }
 
-.CampaignItem:hover>svg>path {
+.CampaignItem:hover>svg>path,
+.active {
     stroke: #0E9D85;
 }
