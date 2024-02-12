@@ -1,5 +1,5 @@
 import React from 'react'
-import MessagePage from '../../components/MessagePage'
+import MessagePage from '../MessagePage'
 export default function Israel() {
   const list = [{
     id: '1234',

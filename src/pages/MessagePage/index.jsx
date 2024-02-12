@@ -1,5 +1,5 @@
 import React from 'react'
-import HeadLine from '../HeadLine'
+import HeadLine from '../../components/HeadLine'
 import { useParams } from 'react-router-dom'
 import style from './style.module.css'
 export default function MessagePage({ list }) {
