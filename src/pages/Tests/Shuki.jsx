@@ -3,7 +3,7 @@ import Button from '../../components/Button'
 export default function Shuki() {
   return (
     <div>Shuki
-      <Button text={"kjhvjh"} />
+      <Button text={"enter"} option={1}  />
     </div>
   )
 }
