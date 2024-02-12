@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import HeadLine from "../../components/HeadLine";
 import InfoViewer from "./InfoViewer";
 import styles from './style.module.css'
 
@@ -9,7 +10,7 @@ export default function campaignCampaignPage(){
         <div className={styles.holdTabs}>
 
         <div>
-        <>headline</>
+        <HeadLine/>
         <>tabswitcher</>
         <Routes>
             <Route path="/" element={<>leadsTab</>} />

@@ -3,13 +3,11 @@
     height: 100vh;
 }
 .holdTabs >div:last-child{
-    background-color: red;
     flex-grow: 1;
     
 
 }
 .holdTabs >div:first-child{
-    background-color: rgb(0, 255, 21);
     width: 300px;
     flex-grow: 0;
   
