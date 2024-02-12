@@ -9,6 +9,6 @@ import MessageForm from '../../components/MessageForm'
 
 export default function David() {
   return (
-    <MessageForm />
+    <MessageForm msg={{subject: 'test'}}  />
   )
 }
