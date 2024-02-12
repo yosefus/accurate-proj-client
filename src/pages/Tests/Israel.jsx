@@ -1,34 +1,49 @@
 import React from 'react'
-import ListMessage from '../../components/ListMessage'
+import Accordion from '../../components/Accordion'
 export default function Israel() {
-  const list = [{
+  const listRead = [{
     id: '1234',
-    context: '',
-    who: '',
-    isActive: true,
-    name: 'bla bla bla',
+    name: 'israel',
+    email: 'a@a',
     date: new Date()
   },
   {
     id: '5678',
-    context: '',
-    who: '',
-    isActive: true,
-    name: 'bla bla bla',
+    name: 'israel',
+    email: 'a@a',
     date: new Date()
   }
     ,
   {
     id: '9123',
-    context: '',
-    who: '',
-    isActive: true,
-    name: 'bla bla bla',
+    name: 'israel',
+    email: 'a@a',
     date: new Date()
   }]
+  const listNoRead = [{
+    id: '1234',
+    name: 'israel',
+    email: 'a@a',
+    date: new Date()
+  },
+  {
+    id: '5678',
+    name: 'israel',
+    email: 'a@a',
+    date: new Date()
+  }
+    ,
+  {
+    id: '9123',
+    name: 'israel',
+    email: 'a@a',
+    date: new Date()
+  }]
+  const tit = 'eikfemf'
   return (
     <div>
-      <ListMessage listMessage={list} />
+      <Accordion title={tit}>{listRead.map(i => <div key={i.id}>{i.name}</div>)}</Accordion>
+
     </div>
   )
 }

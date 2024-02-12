@@ -1,0 +1,15 @@
+.title {
+    display: flex;
+}
+
+.content {
+    display: block;
+}
+
+.show {
+    display: block;
+}
+
+.noShow {
+    display: none;
+}
