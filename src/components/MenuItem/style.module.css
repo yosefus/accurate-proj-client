@@ -1,15 +1,17 @@
+
 .MenuItem {
     text-decoration: none;
-}
-
-.fonts {
     display: flex;
-    justify-content: space-between;
+    gap: 12px;
     align-items: center;
     color: #6B6B6B;
-    width: 10%;
     font-family: Heebo;
     font-size: 18px;
+}
+
+.icon{
+    display: grid;
+    place-items: center;
 }
 
 .fonts:hover {
