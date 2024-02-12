@@ -1,0 +1,22 @@
+.MenuItem {
+    text-decoration: none;
+}
+
+.fonts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #6B6B6B;
+    width: 10%;
+    font-family: Heebo;
+    font-size: 18px;
+}
+
+.fonts:hover {
+    color: #0E9D85;
+
+}
+
+.fonts:hover>svg>path {
+    stroke: #0E9D85;
+}
