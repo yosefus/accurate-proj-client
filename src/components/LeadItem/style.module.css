@@ -1,0 +1,46 @@
+
+.container{
+    display: flex;
+    height: 90px;
+    width: 400px;
+    border: var(--main-border);
+    border-radius: var(--radius);
+    justify-content: start;
+    align-items: center;
+    cursor: pointer;
+    transition: all ease-in-out .2s;
+}
+
+.container:hover, .active{
+    background-color: var(--main-background);
+}
+
+.container:hover > div > svg > path,
+.active > div > svg > path
+{
+    stroke:var(--main-color);
+}
+
+.desc{
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.name{
+font-size: var(--second-size-text);
+}
+
+.date{
+    color: var(--second-color);
+    font-size: var(--third-size-text);
+    display: flex;
+    gap: 6px;
+}
+.icon{
+    padding: 7px 7px;
+    border: var(--main-border);
+    border-radius: var(--radius);
+    margin-right: 20px;
+   
+}
