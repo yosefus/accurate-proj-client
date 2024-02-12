@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './style.module.css'
 
-export default function HeadLine({ primaryText, scontText }) {
+export default function HeadLine({ primaryText, scontText, icone }) {
     // primaryText = name of message, scontText = date of message, icon = icon of edditing message
     // the data shuold bo arrive from createContext 
 
@@ -13,7 +13,7 @@ export default function HeadLine({ primaryText, scontText }) {
                     {/* <div className={`${styles.scontText}`}>{scontText}</div> */}
                     <p className={`${styles.scontText}`}>  נוצר ב {`${scontText.getDate()}/${scontText.getMonth() + 1}/${scontText.getFullYear()} ${scontText.getHours()}:${scontText.getMinutes() < 10 ? '0' + scontText.getMinutes() : scontText.getMinutes()}`}  </p>
                 </div>
-                <img src="/iconEditingMsg.svg" alt="editing" />
+                <div>{icone}</div>
             </div>
         </>
     )
