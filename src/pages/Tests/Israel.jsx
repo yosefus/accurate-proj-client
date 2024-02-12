@@ -1,5 +1,6 @@
 import React from 'react'
 import Accordion from '../../components/Accordion'
+import MessagePage from '../MessagePage'
 export default function Israel() {
   const listRead = [{
     id: '1234',
@@ -42,7 +43,7 @@ export default function Israel() {
   const tit = 'eikfemf'
   return (
     <div>
-      <Accordion title={tit}>{listRead.map(i => <div key={i.id}>{i.name}</div>)}</Accordion>
+      <MessagePage list={listRead} />
 
     </div>
   )
