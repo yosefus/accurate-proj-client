@@ -8,7 +8,7 @@ export default function TabSwitcher({linkList}) {
   return (
     <ul className={style.ulList}>
         {linkList.map((v) =>  <li>
-              <NavLink
+              <NavLink 
                 className={({isActive}) =>
                   isActive ? style.theActiv : style.notActiv
                 }
