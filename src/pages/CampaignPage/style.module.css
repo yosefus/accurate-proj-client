@@ -4,11 +4,15 @@
 }
 .holdTabs >div:last-child{
     flex-grow: 1;
-    
-
 }
 .holdTabs >div:first-child{
-    width: 300px;
+    width: 500px;
     flex-grow: 0;
   
+}
+.headLine{
+    padding: 30px;
+}
+.tabSwitcher{
+    height: 50px;
 }
