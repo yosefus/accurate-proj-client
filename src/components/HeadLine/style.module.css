@@ -12,6 +12,7 @@
 .primaryText{
     font-size: var(--main-size-text);
     font-weight: 400;
+    font-family: var(--second-font);
 }
 
 .scontText{

@@ -10,7 +10,7 @@ export default function ListMessage({ listMessage }) {
         <>
             {listMessage.map(i => {
                 return (
-                    <NavLink to={`/campaign/:${id}/messages/${i.id}`} key={i.id}>
+                    <NavLink to={`/campaign/${id}/messages/${i.id}`} key={i.id}>
 
                         <div className={styles.listMessage}>
 
