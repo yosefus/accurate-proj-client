@@ -1,17 +1,23 @@
-import React from 'react'
-import TabSwitcher from '../../components/TabSwitcher'
+import React, { useContext } from 'react'
 import style from "../../components/TabSwitcher/style.module.css";
 import { Route, Routes } from 'react-router-dom';
+import Popup from '../../Context/Popup';
+import {PopupContext} from '../../Context/Popup';
+
 
 export default function Asaf() {
+  const contex = useContext({...PopupContext});
   
-  let newarr=[{str:'messages', navLink:'messages'},
-  {href:'messages', text:'הודעןת'},
-  {href:'aaa', text:'רשומים'}];
   
   return (
+    <div style={{height: '100vh'}}>
 
-     <TabSwitcher linkList={newarr}/> 
-    
+
+     <button
+        onClick={() => contex.openDialoge({title: "test", comp: <p>hii asaf</p>})}
+      >
+        popup
+      </button>
+    </div>
   )
 }
