@@ -1,0 +1,28 @@
+.layout {
+    display: flex;
+    height: 100vh;
+    direction: rtl;
+}
+
+.layout>div:first-child {
+    background-color: blue;
+    width: 300px;
+    flex-grow: 0;
+}
+
+.layout>div:last-child {
+    flex-grow: 1;
+    background-color: aqua;
+}
+
+.holdTabs{
+    display: flex;
+}
+.holdTabs >div:last-child{
+    background-color: red;
+    
+
+}
+.holdTabs >div :first-child{
+    background-color: black;
+}

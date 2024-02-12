@@ -12,7 +12,7 @@ export default function Test() {
      <Routes>
         <Route path='itamar' element={<Itamar/>} />
         <Route path='israel' element={<Israel/>} />
-        <Route path='asaf' element={<Asaf/>} />
+        <Route path='asaf/*' element={<Asaf/>} />
         <Route path='avi' element={<Avi/>} />
         <Route path='shuki' element={<Shuki/>} />
         <Route path='david' element={<David/>} />

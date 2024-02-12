@@ -1,0 +1,21 @@
+.contaner{
+    height: 52px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.lines{
+    display: flex;
+    flex-direction: column;
+}
+.primaryText{
+    font-size: var(--main-size-text);
+    font-weight: 400;
+}
+
+.scontText{
+color: var(--second-color);
+font-weight: 400;
+font-size: 18px;
+}
