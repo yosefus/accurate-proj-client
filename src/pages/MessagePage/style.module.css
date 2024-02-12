@@ -1,0 +1,27 @@
+.contentMsg {
+    width: 100%;
+}
+
+.divMain {
+    height: 700px;
+    width: 600px;
+
+    padding: 4%;
+}
+
+.centerDiv {
+    height: 100%;
+
+}
+
+.title {
+    margin-bottom: 1.5rem;
+}
+
+.contentDiv {
+    height: fit-content;
+    border: 1px solid;
+    border-radius: 10px;
+    border-color: rgb(183, 165, 165);
+    padding: 20px;
+}

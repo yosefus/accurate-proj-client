@@ -1,0 +1,9 @@
+.massage{
+    width: 730px;
+    height: 730px;
+}
+
+.btn{
+    display: flex;
+    justify-content: space-between;
+}
