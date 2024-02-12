@@ -11,6 +11,13 @@
     background-color: #F3F3F5;
 }
 
+/* .linkMessage {
+    color: aqua;
+} */
+.active:hover {
+    color: brown;
+}
+
 .name {
     font-size: 18px;
 }
