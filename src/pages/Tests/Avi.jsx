@@ -17,10 +17,10 @@
 // import React from 'react'
 // import Campaign_Form from '../../components/Campaign_Form'
 
-// function Avi() {
-//   return (
-//     <div><Campaign_Form /></div>
-//   )
-// }
+function Avi() {
+  return (
+    <div><Campaign_Form /></div>
+  )
+}
 
-// export default Avi
+export default Avi
