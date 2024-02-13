@@ -2,9 +2,10 @@ import React from 'react'
 import HeadLine from '../../components/HeadLine'
 import { useParams } from 'react-router-dom'
 import style from './style.module.css'
-import Accordion from '../../components/Accordion'
-export default function MessagePage({ list }) {
+export default function MessagePage() {
+    // this function shoul get all messages of current campaign
     // msgId should be arrive from useParams
+    const list = [{ name: 'first message', date: new Date(), id: '1234', content: 'סתכל על עצמך רגע! אתה בטוח שזה לא יכול להראות טוב יותר? שאתה לא יכול להרגיש טוב יותר? זה זמן לשינוי. מועדון הכושר שלנו מציע תוכניות מותאמות אישית לכל רמת כושר ומטרה. אנחנו מאמינים שכולם יכולים להגיע לחזונותיהם, ואנחנו כאן להכווין אותך כל הדרך. אם אתה מחפש להשיג גוף חזק יותר, להרגיש בריא יותר, להגביר את מסת השריר, או אפילו פשוט לשפר את מצב הרוח - יש לנו את מה שאתה צריך.' }, { name: 'first message', id: '1234', date: new Date(), content: 'סתכל על עצמך רגע! אתה בטוח שזה לא יכול להראות טוב יותר? שאתה לא יכול להרגיש טוב יותר? זה זמן לשינוי. מועדון הכושר שלנו מציע תוכניות מותאמות אישית לכל רמת כושר ומטרה. אנחנו מאמינים שכולם יכולים להגיע לחזונותיהם, ואנחנו כאן להכווין אותך כל הדרך. אם אתה מחפש להשיג גוף חזק יותר, להרגיש בריא יותר, להגביר את מסת השריר, או אפילו פשוט לשפר את מצב הרוח - יש לנו את מה שאתה צריך.' }]
     const msgId = 1234
     const Msg = list.find(i => i.id == msgId)
     const nameTitleMsg = Msg.name
@@ -43,7 +44,7 @@ export default function MessagePage({ list }) {
                 </div>
                 <div className={style.contentDiv}>
 
-                    <p className={style.contentMsg}>סתכל על עצמך רגע! אתה בטוח שזה לא יכול להראות טוב יותר? שאתה לא יכול להרגיש טוב יותר? זה זמן לשינוי. מועדון הכושר שלנו מציע תוכניות מותאמות אישית לכל רמת כושר ומטרה. אנחנו מאמינים שכולם יכולים להגיע לחזונותיהם, ואנחנו כאן להכווין אותך כל הדרך. אם אתה מחפש להשיג גוף חזק יותר, להרגיש בריא יותר, להגביר את מסת השריר, או אפילו פשוט לשפר את מצב הרוח - יש לנו את מה שאתה צריך.</p>
+                    <p className={style.contentMsg}>{Msg.content}</p>
                 </div>
                 <Accordion title={tit}>{listRead.map(i => <div key={i.id}>{i.name}</div>)}</Accordion>
                 <Accordion title={tit}>{listRead.map(i => <div key={i.id}>{i.name}</div>)}</Accordion>
