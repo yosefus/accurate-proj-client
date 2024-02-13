@@ -10,10 +10,8 @@ export default function Popup({children}) {
 
   const tesrRef = useRef(null);
 
-  // TODO - add logic to open from evry place in the website
   function openDialoge({comp, title}) {
     if (!tesrRef.current) return;
-    //  TODO change
 
     setpopupContent({comp, title});
     tesrRef.current.showModal();
@@ -21,7 +19,6 @@ export default function Popup({children}) {
 
   function closeDailog() {
     if (!tesrRef.current) return;
-    //  TODO change state to false
     setpopupContent(false);
     tesrRef.current.close();
   }

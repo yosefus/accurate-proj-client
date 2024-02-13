@@ -6,7 +6,7 @@ import InputArea from '../InputArea'
 import Button from '../Button'
 import Label from '../Label'
 
-export default function MessageForm({ isUpdate ,msg={}  }) {
+export default function MessageForm({ isUpdate ,msg={} , closeDailog }) {
 
 const [massage, setMassage] = useState({subject: msg.subject|| '', content: msg.content || ''})
 
@@ -33,7 +33,7 @@ const handleChange = e => setMassage(old => ({...old, [e.target.name]: e.target.
                 <InputArea name={'content'} onChange={handleChange} value={massage.content} />
                 </div>
                 <div className={`${styles.btn}`} >
-                    <Button text={'ביטול'} option={'2'} type='button' />
+                    <Button text={'ביטול'} option={'2'} type='button' onClick={closeDailog}/>
                     <Button text={'שמירה'} option={'1'} type="submit"/>
                 </div>
             </form>
