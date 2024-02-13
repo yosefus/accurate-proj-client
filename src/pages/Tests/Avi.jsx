@@ -5,11 +5,22 @@
 //     <div>{list.map(li => <MenuItem txt={li.txt} icon={li.icon} href={li.href} key={li.txt} />)}</div>
 //   )
 
-import React from 'react'
-import LeadPage from '../LeadPage'
+// import React from 'react'
+// import LeadPage from '../LeadPage'
 
-export default function Avi() {
+// export default function Avi() {
+//   return (
+//     <div><LeadPage /></div>
+//   )
+// }
+
+import React from 'react'
+import Campaign_Form from '../../components/Campaign_Form'
+
+function Avi() {
   return (
-    <div><LeadPage /></div>
+    <div><Campaign_Form /></div>
   )
 }
+
+export default Avi

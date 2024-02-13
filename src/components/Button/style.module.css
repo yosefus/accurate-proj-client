@@ -1,19 +1,20 @@
-.importent{
-    background-color:var(--main-color);
+.importent {
+    background-color: var(--main-color);
     border-radius:
-    8px;
-color: white;
+        8px;
+    color: white;
 }
 
-.secondary{
+.secondary {
     background-color: #E8E8E8;
-    border-radius:0 ;
+    border-radius: 0;
 }
 
 .buttons {
+    Width: 115px;
+    Height: 55px;
     padding: 7px 32px 7px 32px;
     gap: 6px;
     font-size: 18px;
     border: 0px
-  }
-
+}

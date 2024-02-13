@@ -1,14 +1,15 @@
 import { NavLink } from "react-router-dom";
+import FormatDate from "../../functions/FormatDate";
 import LeadItem from "../LeadItem";
 import styles from "./style.module.css"
-export default function LeadsTab({ LeadList }) {
+export default function LeadsTab({ LeadList,idCampaign }) {
     // [{name:"",date:"",email:"",id:""},{}]
+   
     return (
-        <> {LeadList.map((i) => {
+        <> 
+        {LeadList.map((i) => {
             return (
-                <>
-                <LeadItem date={`${i.date.getDate()}/${i.date.getMonth() + 1}/${i.date.getFullYear()}`} name={i.name} email={i.email} to={`/campaign/${123}/leads/${i.id}`}   />
-                </>
+                <LeadItem key={i._id} date={FormatDate(i?.joinDate)} to={`/campaign/${idCampaign}/leads/${i._id}`} email={i?.lead?.email} name={i?.lead?.name}   />
             )
         })}
         </>

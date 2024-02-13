@@ -1,6 +1,6 @@
-.massage{
-    width: 730px;
-    height: 400px;
+.lead{
+    width: 700px;
+    height: 600px;
     margin-left: 20px;
     margin-right: 20px;
     gap: 20px;
@@ -8,7 +8,9 @@
     flex-direction: column;
     justify-content: space-around;
     margin-bottom: 20px;
-    
+    border: var(--main-border);
+    padding: 20px;
+    margin-top: 20px;
 }
 
 .btn{
@@ -16,6 +18,4 @@
     justify-content: space-between;
     }
 
-    .input{
-        width: 60%;
-    }
+  
