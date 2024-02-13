@@ -9,7 +9,7 @@ export default function LeadsTab({ LeadList,idCampaign }) {
         <> 
         {LeadList.map((i) => {
             return (
-                <LeadItem key={i._id} date={FormatDate(i?.joinDate)} to={`/campaign/${idCampaign}/leads/${i._id}`} email={i?.lead?.email} name={i?.lead?.name}   />
+                <LeadItem key={i._id} date={FormatDate(i?.joinDate,true)} to={`/campaign/${idCampaign}/leads/${i._id}`} email={i?.lead?.email} name={i?.lead?.name}   />
             )
         })}
         </>
