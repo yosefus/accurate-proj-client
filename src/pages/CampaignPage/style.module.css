@@ -1,6 +1,7 @@
 .holdTabs{
     display: flex;
     height: 100vh;
+    position: relative;
 }
 .holdTabs >div:last-child{
     flex-grow: 1;
@@ -11,8 +12,9 @@
   
 }
 .headLine{
-    padding: 30px;
+    padding: 50px;
 }
 .tabSwitcher{
+    margin: 35px 0;
     height: 50px;
 }
