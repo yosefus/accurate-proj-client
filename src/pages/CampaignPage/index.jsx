@@ -18,6 +18,7 @@ export default function campaignCampaignPage() {
 
   // get data from the server by id
   const [campaign, setcampaign] = useState({});
+  const leads = campaign.leads || []
 
   
   const toget = async () => {
@@ -30,6 +31,7 @@ export default function campaignCampaignPage() {
   useEffect(() => {
     toget();
   }, [id]);
+  console.log(campaign);
 
   return (
     <campaignContext.Provider value={{toget, campaign}}>
@@ -38,16 +40,17 @@ export default function campaignCampaignPage() {
         <div className={styles.holdTabs}>
           <div>
             <div className={styles.headLine}>
+
               <HeadLine
-                primaryText={"מנויי חדר כושר גבעת שמואל"}
+                primaryText={campaign.title}
                 scontText={"24 מרשמים 3 הודעות"}
                 icone={<img src="/threePoints.svg" alt="three points" />}
               />
               <div className={styles.tabSwitcher}>
                 <TabSwitcher
                   linkList={[
-                    {text: "נרשמים", href: "/campaign/123/leads/"},
-                    {text: "הודעות", href: "/campaign/141/messages/"},
+                    {text: "נרשמים", href: `/campaign/${id}/leads/`},
+                    {text: "הודעות", href: `/campaign/${id}/messages/`}
                   ]}
                 />
               </div>
@@ -57,20 +60,7 @@ export default function campaignCampaignPage() {
                   path="/"
                   element={
                     <LeadsTab
-                      LeadList={[
-                        {
-                          id: "33",
-                          name: "avior",
-                          email: "yuiad@asd.com",
-                          date: new Date(),
-                        },
-                        {
-                          id: "34",
-                          name: "dani",
-                          email: "tasdk@asd.com",
-                          date: new Date(),
-                        },
-                      ]}
+                      LeadList={leads}
                     />
                   }
                 />
