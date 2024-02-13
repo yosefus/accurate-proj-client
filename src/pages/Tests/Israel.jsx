@@ -28,7 +28,7 @@ export default function Israel() {
   }]
   return (
     <div>
-      <MessagePage list={list} />
+      <MessagePage />
     </div>
   )
 }
