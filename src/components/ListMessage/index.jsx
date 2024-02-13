@@ -6,6 +6,7 @@ import styles from './styles.module.css'
 export default function ListMessage({ listMessage }) {
     // listMessage should get array of objs with all information about messeages
     // to change date from listMessage to createContext 
+    // id , date , 
     const { id } = useParams()
 
 
