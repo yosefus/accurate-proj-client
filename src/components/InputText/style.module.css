@@ -1,6 +1,6 @@
 .input{
     border: var(--main-border);
     border-radius: var(--radius);
-    width: 100%;
+    width: 60%;
     height: 34px;
 }
