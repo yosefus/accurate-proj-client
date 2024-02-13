@@ -68,20 +68,9 @@ export default function campaignCampaignPage() {
                       path="/"
                       element={
                         <LeadsTab
-                          LeadList={[
-                            {
-                              id: "33",
-                              name: "avior",
-                              email: "yuiad@asd.com",
-                              date: new Date(),
-                            },
-                            {
-                              id: "34",
-                              name: "dani",
-                              email: "tasdk@asd.com",
-                              date: new Date(),
-                            },
-                          ]}
+                          LeadList={leads}
+                          idCampaign={id}
+
                         />
                       }
                     />
@@ -89,20 +78,9 @@ export default function campaignCampaignPage() {
                       path="/leads/*"
                       element={
                         <LeadsTab
-                          LeadList={[
-                            {
-                              id: "33",
-                              name: "avior",
-                              email: "yuiad@asd.com",
-                              date: new Date(),
-                            },
-                            {
-                              id: "34",
-                              name: "dani",
-                              email: "tasdk@asd.com",
-                              date: new Date(),
-                            },
-                          ]}
+                          LeadList={leads}
+                          idCampaign={id}
+
                         />
                       }
                     />
