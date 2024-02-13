@@ -1,7 +1,14 @@
+import { useEffect, useState } from "react";
 import CampaignItem from "../../components/CampaignItem";
 import MenuItem from "../../components/MenuItem";
+import apiReq from "../../functions/ApiReq";
 import styles from "../style.module.css"
 export default function SideBar() {
+    const [getData,setGetData] = useState([])    
+    useEffect(()=>{
+    apiReq({name:"GET",path:"campaign"}).then((data)=>setGetData(data))
+},[])
+
 
     return (
         <>
@@ -16,10 +23,13 @@ export default function SideBar() {
 
                 <div className={styles.buttom}>
                     <p className={styles.lists}>רשימות</p>
+                     {
+getData.map((v)=>{ 
+return <CampaignItem key={v._id} txt={v.title} id={v._id} />
+})
 
-                    <CampaignItem txt={"for exemple"} id={123} />
-                    <CampaignItem txt={"for exemple"} id={124} />
-                    <CampaignItem txt={"for exemple"} id={125} />
+                     }
+                    
 
 
                 </div>
