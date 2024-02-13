@@ -86,10 +86,9 @@
 
 
 
-@-webkit-keyframes fade-in {
+/* @-webkit-keyframes fade-in {
     0% {
         opacity: 0;
-
     }
 
     100% {
@@ -100,27 +99,41 @@
 @keyframes fade-in {
     0% {
         opacity: 0;
-        height: 0px;
     }
 
     100% {
         opacity: 1;
         height: 400px;
     }
-}
+} */
+
 
 
 
 
 
 .show {
-    .fade-in {
-        -webkit-animation: fade-in 3.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-        animation: fade-in 3.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    }
+    /* 
+    -webkit-animation: fade-in 3.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in 3.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both; */
+    display: flex;
+    position: absolute;
+    width: 400px;
+    background-color: aqua;
+
 }
 
 .noShow {
-    -webkit-animation: slide-out-blurred-top 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) forwards;
-    animation: slide-out-blurred-top 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) forwards;
+    /* -webkit-animation: slide-out-blurred-top 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) forwards;
+    animation: slide-out-blurred-top 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) forwards; */
+    display: none;
+}
+
+.btn {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    background-color: white;
+    color: white;
+    margin: .5rem;
 }
