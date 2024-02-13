@@ -42,8 +42,7 @@ export default function Israel() {
   const tit = 'eikfemf'
   return (
     <div>
-      <MessagePage list={listRead} />
-
+      <MessagePage />
     </div>
   )
 }
