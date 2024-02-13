@@ -1,6 +1,8 @@
 .massage{
     width: 730px;
-    height: 730px;
+    height: 400px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .btn{
