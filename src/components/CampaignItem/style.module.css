@@ -29,3 +29,10 @@
 .CampaignItem:hover>svg>path {
     stroke: #0E9D85;
 }
+
+p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
