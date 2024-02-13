@@ -1,31 +1,45 @@
 import React from 'react'
 import MessagePage from '../MessagePage'
 export default function Israel() {
-  const list = [{
+  const listRead = [{
     id: '1234',
-    context: '',
-    who: '',
-    isActive: true,
-    name: 'bla bla bla',
+    name: 'israel',
+    email: 'a@a',
     date: new Date()
   },
   {
     id: '5678',
-    context: '',
-    who: '',
-    isActive: true,
-    name: 'bla bla bla',
+    name: 'israel',
+    email: 'a@a',
     date: new Date()
   }
     ,
   {
     id: '9123',
-    context: '',
-    who: '',
-    isActive: true,
-    name: 'bla bla bla',
+    name: 'israel',
+    email: 'a@a',
     date: new Date()
   }]
+  const listNoRead = [{
+    id: '1234',
+    name: 'israel',
+    email: 'a@a',
+    date: new Date()
+  },
+  {
+    id: '5678',
+    name: 'israel',
+    email: 'a@a',
+    date: new Date()
+  }
+    ,
+  {
+    id: '9123',
+    name: 'israel',
+    email: 'a@a',
+    date: new Date()
+  }]
+  const tit = 'eikfemf'
   return (
     <div>
       <MessagePage />

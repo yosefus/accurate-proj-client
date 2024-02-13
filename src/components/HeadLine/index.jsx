@@ -11,7 +11,7 @@ export default function HeadLine({ primaryText, scontText, icone }) {
                 <div className={`${styles.lines}`} >
                     <div className={`${styles.primaryText}`}>{primaryText}</div>
                     {/* <div className={`${styles.scontText}`}>{scontText}</div> */}
-                    <p className={`${styles.scontText}`}>  נוצר ב {`${scontText.getDate()}/${scontText.getMonth() + 1}/${scontText.getFullYear()} ${scontText.getHours()}:${scontText.getMinutes() < 10 ? '0' + scontText.getMinutes() : scontText.getMinutes()}`}  </p>
+                    <p className={`${styles.scontText}`}> {scontText} </p>
                 </div>
                 <div>{icone}</div>
             </div>
