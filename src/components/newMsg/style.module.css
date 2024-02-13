@@ -27,3 +27,14 @@ stroke: white;
     background-color: #E8E8E8;
     
   }
+  .newMsg{
+    padding-top: 30px;
+    position: absolute;
+    bottom: 50px;
+    border-top:solid 1px #E8E8E8 ;
+    width: 400px;
+   
+  }
+  .holdNewMsg > div{
+    padding-right: 30px;
+  }
