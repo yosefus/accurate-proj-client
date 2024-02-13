@@ -29,6 +29,7 @@ export default function ListMessage({ listMessage }) {
             })
             }
             <div><NewMsg/></div>
+            
         </>
     )
 }
