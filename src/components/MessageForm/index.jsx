@@ -4,6 +4,7 @@ import HeadLine from '../HeadLine'
 import InputText from '../InputText'
 import InputArea from '../InputArea'
 import Button from '../Button'
+import Label from '../Label'
 
 export default function MessageForm({ isUpdate ,msg={}  }) {
 
@@ -21,10 +22,16 @@ const handleChange = e => setMassage(old => ({...old, [e.target.name]: e.target.
 
         <>
             <form onSubmit={handleSubmit} className={`${styles.massage}`}>
-                <HeadLine primaryText={"שם ההודעה"} scontText={'שם פנימי שיהיה חשוף רק לך'} />
+                <div>
+                <Label primaryText={"שם ההודעה"} scontText={'שם פנימי שיהיה חשוף רק לך'} id='aa1122' required={true} />
+                <div className={`${styles.input}`}>
                 <InputText type={'text'} name={'subject'} onChange={handleChange} value={massage.subject }/>
-                <HeadLine primaryText={"הודעה"} scontText={'זוהי ההודעה שתשלח בתזמון הנבחר'} />
+                </div>
+                </div>
+                <div>
+                <Label primaryText={"הודעה"} scontText={'זוהי ההודעה שתשלח בתזמון הנבחר'} id='bb1122' />
                 <InputArea name={'content'} onChange={handleChange} value={massage.content} />
+                </div>
                 <div className={`${styles.btn}`} >
                     <Button text={'ביטול'} option={'2'} type='button' />
                     <Button text={'שמירה'} option={'1'} type="submit"/>
