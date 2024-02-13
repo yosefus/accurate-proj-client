@@ -5,8 +5,8 @@ import InputArea from '../InputArea';
 import InputText from '../InputText';
 import Label from '../Label';
 
-export default function Campaign_Form() {
-    const [formData, setFormData] = useState({ title: "", details: "" });
+export default function Campaign_Form({ campaign = {}, path }) {
+    const [formData, setFormData] = useState({ title: campaign.title || "", details: campaign.details || "" })
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(formData);
@@ -18,16 +18,15 @@ export default function Campaign_Form() {
     return (
         <form className={styles.all} onSubmit={handleSubmit}>
             <div className={styles.size}>
-                <Label primaryText="שם רשימה" scontText="שם פנימי שלא יהיה חשוף למצטרפים לרשימה" htmlFor="title" required={true} >
-                    <InputText type="text" name="title"
-                        value={formData.title}
-                        onChange={handleChange} />
-                </Label>
-            </div>
-            <Label primaryText="תיאור" scontText="תיאור הקמפיין" htmlFor="details" required={false} >
-                <InputArea name="details" id="details" value={formData.details}
+                <Label primaryText="שם רשימה" scontText="שם פנימי שלא יהיה חשוף למצטרפים לרשימה" htmlFor="title" required={true} />
+                <InputText type="text" name="title" id="title"
+                    value={formData.title}
                     onChange={handleChange} />
-            </Label>
+            </div>
+            <div>
+                <Label primaryText="תיאור" scontText="תיאור הקמפיין" htmlFor="details" required={false} />
+                <InputArea name="details" id="details" value={formData.details} onChange={handleChange} />
+            </div>
             <div className={styles.but}>
                 <Button text="ביטול" onClick={() => { console.log("bla") }} type="button" option={2} />
                 <Button text="שמירה" type="submit" option={1} />
