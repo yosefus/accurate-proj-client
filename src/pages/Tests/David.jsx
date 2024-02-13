@@ -7,14 +7,15 @@ import LeadItem from '../../components/LeadItem'
 import MessageForm from '../../components/MessageForm'
 import { PopupContext } from '../../Context/Popup'
 import Label from '../../components/Label'
+import LeadForm from '../../components/LeadForm'
 
 
 export default function David() {
-  const{openDialoge}=useContext(PopupContext)
+  const{openDialoge,closeDailog }=useContext(PopupContext)
+  // console.log(closeDailog);
   return (
-    <button onClick={() => openDialoge({comp:<MessageForm />, title: "הודעה חדשה"})}> klick</button>
-  )
-}
+    <button onClick={() => openDialoge({comp:<LeadForm closeDailog={closeDailog}  />, title: "נרשם חדש"})}> klick</button>
+)}
 
 // export default function David() {
 
