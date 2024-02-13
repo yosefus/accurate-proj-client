@@ -12,7 +12,7 @@ export default function Accordion({ children, title }) {
                 </div>
             </div>
             <div className={`${styles.content} ${visibility === "show" ? styles.show : visibility === "hide" ? styles.noShow : ""}`}>
-                {children}
+                {visibility == null ? '' : children}
             </div>
         </div>
     )

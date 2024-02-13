@@ -1,0 +1,29 @@
+.newMsg>button{
+    background-color:white;
+    border: none;
+    cursor: pointer;
+    transition: all ease-in-out 0.2s;
+    display: flex;
+    
+}
+.newMsg>button:hover{
+    transform: scale(1.1);
+    
+}
+.newMsg>button:active >span{
+    background: #0E9D85;
+}
+.newMsg>button:active>span>svg>path{
+stroke: white;
+}
+.newMsg>button>span{
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+   height: 20px;
+   border-radius: 50%;
+    background-color: #E8E8E8;
+    
+  }
