@@ -9,13 +9,29 @@ export default function Israel() {
   const list = [{
     name: 'editting',
     href: '/',
-    icon: iconchild
+    icon: iconchild,
+    color: 'yellow'
   },
   {
     name: "delete",
     onClick: () => console.log('onclick is work'),
-    icon: iconchild
-  }]
+    icon: iconchild,
+    color: 'green'
+  },
+  {
+    name: "add",
+    onClick: () => console.log('onclick is work'),
+    icon: iconchild,
+    color: 'red'
+  },
+  {
+    name: "dfsc",
+    onClick: () => console.log('onclick is work'),
+    icon: iconchild,
+    color: 'grey'
+  }
+
+  ]
 
   const tit = 'eikfemf'
   return (
