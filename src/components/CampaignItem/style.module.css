@@ -22,7 +22,10 @@
     color: black;
 }
 
-.CampaignItem:hover>svg>path,
-.active {
+.CampaignItem.active>svg>path {
+    stroke: #0E9D85;
+}
+
+.CampaignItem:hover>svg>path {
     stroke: #0E9D85;
 }
