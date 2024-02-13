@@ -16,6 +16,7 @@ export const campaignContext = createContext(null);
 export default function campaignCampaignPage() {
   const [toLoding, settoLoding] = useState(true);
   const [campaign, setcampaign] = useState({});
+  const leads = campaign.leads || []
 
   const { id } = useParams();
 
@@ -49,15 +50,15 @@ export default function campaignCampaignPage() {
               /> :
                 <>
                   <HeadLine
-                    primaryText={"מנויי חדר כושר גבעת שמואל"}
+                    primaryText={campaign.title}
                     scontText={"24 מרשמים 3 הודעות"}
                     icone={<img src="/threePoints.svg" alt="three points" />}
                   />
                   <div className={styles.tabSwitcher}>
                     <TabSwitcher
                       linkList={[
-                        { text: "נרשמים", href: "/campaign/123/leads/" },
-                        { text: "הודעות", href: "/campaign/141/messages/" },
+                        { text: "נרשמים", href: `/campaign/${id}/leads/` },
+                        { text: "הודעות", href: `/campaign/${id}/messages/` }
                       ]}
                     />
                   </div>
