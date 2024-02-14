@@ -1,11 +1,13 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import styles from "./style.module.css"
 import Button from '../Button';
 import InputArea from '../InputArea';
 import InputText from '../InputText';
 import Label from '../Label';
+import { PopupContext } from '../../Context/Popup';
 
 export default function Campaign_Form({ campaign = {}, path }) {
+    const { closeDailog } = useContext(PopupContext)
     const [formData, setFormData] = useState({ title: campaign.title || "", details: campaign.details || "" })
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -28,7 +30,7 @@ export default function Campaign_Form({ campaign = {}, path }) {
                 <InputArea name="details" id="details" value={formData.details} onChange={handleChange} />
             </div>
             <div className={styles.but}>
-                <Button text="ביטול" onClick={() => { console.log("bla") }} type="button" option={2} />
+                <Button text="ביטול" onClick={() => { closeDailog() }} type="button" option={2} />
                 <Button text="שמירה" type="submit" option={1} />
             </div>
         </form>
