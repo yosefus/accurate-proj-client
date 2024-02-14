@@ -11,7 +11,7 @@ import { useParams } from "react-router-dom";
 import apiReq from "../../functions/ApiReq";
 import ClipLoader from "react-spinners/ClipLoader";
 
-export const campaignContext = createContext(null);
+export const CampaignContext = createContext(null);
 
 export default function campaignCampaignPage() {
   const [toLoding, settoLoding] = useState(true);
@@ -34,7 +34,7 @@ export default function campaignCampaignPage() {
   useEffect(() => { toget() }, [id]);
 
   return (
-    <campaignContext.Provider value={{ toget, campaign }}>
+    <CampaignContext.Provider value={{ toget, campaign }}>
       <>
         {/* TODO - middle */}
         <div className={styles.holdTabs}>
@@ -102,6 +102,6 @@ export default function campaignCampaignPage() {
           <InfoViewer />
         </div>
       </>
-    </campaignContext.Provider>
+    </CampaignContext.Provider>
   );
 }
