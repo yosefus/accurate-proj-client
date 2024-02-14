@@ -17,7 +17,7 @@ export default function campaignCampaignPage() {
   const [toLoding, settoLoding] = useState(true);
   const [campaign, setcampaign] = useState({});
   const leads = campaign.leads || []
-
+ const messages = campaign.msg || []
   const { id } = useParams();
 
 
@@ -51,7 +51,7 @@ export default function campaignCampaignPage() {
                 <>
                   <HeadLine
                     primaryText={campaign.title}
-                    scontText={"24 מרשמים 3 הודעות"}
+                    scontText={`${leads.length} נרשמים ${messages.length} הודעות`}
                     icone={<img src="/threePoints.svg" alt="three points" />}
                   />
                   <div className={styles.tabSwitcher}>
@@ -88,9 +88,9 @@ export default function campaignCampaignPage() {
                       path="/messages/*"
                       element={
                         <ListMessage
-                          listMessage={[
-                            { id: 3124, name: "itamar", date: new Date() },
-                          ]}
+                          listMessage={
+                           messages 
+                          }
                         />
                       }
                     />
