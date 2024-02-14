@@ -14,8 +14,8 @@ export default function LeadPage() {
     const campaign = context?.campaign || {}
     const lid = campaign?.leads?.find?.(l => l.lead._id === leadId);
 
-    const { openDialoge, closeDialoge } = useContext(PopupContext)
-
+    const { openDialoge, closeDailog } = useContext(PopupContext)
+    console.log(closeDailog);
     if (!lid) return <></>;
     return (
         <div className={styles.all}>
@@ -24,14 +24,15 @@ export default function LeadPage() {
                     primaryText={lid.lead.name}
                     scontText={"פעיל"}
                     icone={<img src="/edit-04.svg" alt="icon" onClick={() => openDialoge({
-                        comp: <LeadForm isUpdate={true} originalLead={lid.lead} closeDialoge={closeDialoge} />,
+                        comp: <LeadForm isUpdate={true} originalLead={lid.lead} closeDailog={closeDailog} />,
                         title: "נרשם חדש"
                     })} />}
                 />
             </div>
             <div className={styles.cub}>
                 <div className={styles.container}>
-                    <div className={styles.item}>שם <p className={styles.big}>{lid.lead.name}</p></div>
+                    <div className={styles.item}>שם פרטי<p className={styles.big}>{lid.lead.Lname || lid.lead.name}</p></div>
+                    <div className={styles.item}>שם משפחה<p className={styles.big}>{lid.lead.Fname || lid.lead.name}</p></div>
                     <div className={styles.item}>טלפון<p className={styles.big}>{lid.lead.phone}</p></div>
                     <div className={styles.item}>אימייל<p className={styles.big}>{lid.lead.email}</p></div>
                 </div>
