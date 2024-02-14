@@ -15,7 +15,6 @@ export default function LeadPage() {
     const lid = campaign?.leads?.find?.(l => l.lead._id === leadId);
 
     const { openDialoge, closeDailog } = useContext(PopupContext)
-    console.log(closeDailog);
     if (!lid) return <></>;
     return (
         <div className={styles.all}>
