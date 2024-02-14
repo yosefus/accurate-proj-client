@@ -3,11 +3,12 @@ import HeadLine from '../../components/HeadLine'
 import { useParams } from 'react-router-dom'
 import Accordion from '../../components/Accordion'
 import style from './style.module.css'
-import { campaignContext } from '../CampaignPage'
+import { CampaignContext } from '../CampaignPage'
 import ListNoRead from '../../functions/GetAllLeadsNoGet'
 export default function MessagePage() {
-    const context = useContext(campaignContext)
+    const context = useContext(CampaignContext)
     const { campaign } = context
+
     // this function shoud get all messages of current campaign
     // msgId should be arrive from useParams
     const { msgId } = useParams()
@@ -41,8 +42,9 @@ export default function MessagePage() {
 
                     <p className={style.contentMsg}>{MsgToPrint.content}</p>
                 </div>
-                <Accordion title={leadsSent}>{campaign.leads.map(i => <div key={i.id}>{i.name}</div>)}</Accordion>
-                <Accordion title={leadsNoSent}>{campaign.leads.map(i => <div key={i.id}>{i.name}</div>)}</Accordion>
+                {console.log('name lead', campaign.leads[1].lead.name)}
+                <Accordion title={leadsSent}>{campaign.leads.map(i => <div key={i._id}>{i.lead.name}  </div>)}</Accordion>
+                <Accordion title={leadsNoSent}>{campaign.leads.map(i => <div key={i._id}>{i.lead.name}</div>)}</Accordion>
             </div>
 
         </div>
