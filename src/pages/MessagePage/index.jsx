@@ -1,6 +1,7 @@
 import React from 'react'
 import HeadLine from '../../components/HeadLine'
 import { useParams } from 'react-router-dom'
+import Accordion from '../../components/Accordion'
 import style from './style.module.css'
 export default function MessagePage() {
     // this function shoul get all messages of current campaign
@@ -33,7 +34,7 @@ export default function MessagePage() {
         email: 'a@a',
         date: new Date()
     }]
-    const tit = 'eikfemf'
+    const tit = 'sdddddddddd'
     return (
         <div className={style.divMain}>
             <div className={style.centerDiv}>
