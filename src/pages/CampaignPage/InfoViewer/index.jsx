@@ -6,7 +6,7 @@ export default function InfoViewer() {
 
     return (
         <Routes>
-            <Route path="/messages/:msgId" element={<MessagePage />} />
+            <Route path="/messages/:msgId" element={<div className={styles.leftSide}><MessagePage /></div>} />
             {/* [{id: title context }] */}
             <Route path="/leads/:leadId" element={<div className={styles.leftSide}><LeadPage /></div>} />
         </Routes>
