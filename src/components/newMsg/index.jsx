@@ -3,14 +3,14 @@ import styles from "./style.module.css"
 import { PopupContext } from "../../Context/Popup"
 import MessageForm from "../MessageForm"
 export default function NewMsg() {
-    const {openDialoge,closeDialoge} = useContext(PopupContext)
+    const {openDialoge,closeDailog} = useContext(PopupContext)
 return(
     <>
    
     <div className={styles.holdNewMsg}>
         <div className={styles.newMsg}>
             
-        <button onClick={()=>openDialoge({comp:<MessageForm/>,title:"הודעה חדשה"})}>
+        <button onClick={()=>openDialoge({comp:<MessageForm closeDailog={closeDailog}/>,title:"הודעה חדשה"})}>
 
             <span>
             <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
