@@ -1,40 +1,46 @@
-.newMsg>button{
-    background-color:white;
-    border: none;
-    cursor: pointer;
-    transition: all ease-in-out 0.2s;
-    display: flex;
-    
+.newMsg>button {
+  border: none;
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+  display: flex;
+  padding: 20px;
+  width: 100%;
 }
-.newMsg>button:hover{
-    transform: scale(1.1);
-    
+
+.newMsg>button:hover {
+  transform: scale(0.99);
+
 }
-.newMsg>button:active >span{
-    background: #0E9D85;
+
+.newMsg>button:active>span {
+  background: #0E9D85;
 }
-.newMsg>button:active>span>svg>path{
-stroke: white;
+
+.newMsg>button:active>span>svg>path {
+  stroke: white;
 }
-.newMsg>button>span{
-    margin-left: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 20px;
-   height: 20px;
-   border-radius: 50%;
-    background-color: #E8E8E8;
-    
-  }
-  .newMsg{
-    padding-top: 30px;
-    position: sticky;
-    bottom: 50px;
-    border-top:solid 1px #E8E8E8 ;
-    width: 400px;
-   
-  }
-  .holdNewMsg > div{
-    padding-right: 30px;
-  }
+
+.newMsg>button>span {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #E8E8E8;
+
+}
+
+.newMsg {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top: solid 1px #E8E8E8;
+  background-color: white;
+}
+
+/* .holdNewMsg>div { */
+/* padding-right: 30px; */
+/* } */
