@@ -12,7 +12,8 @@ console.log('api req start🧑🏽\n',{name, path, data});
     // GET request for remote image in node.js
   const response = await axios({
     method: name,
-    url: `https://mock-whatsup.onrender.com/api/` + path,
+    // url: `https://mock-whatsup.onrender.com/api/` + path,
+    url: `http://localhost:3003/api/` + path,
     data,
   });
 console.log("api req end 😁\n", {response});
