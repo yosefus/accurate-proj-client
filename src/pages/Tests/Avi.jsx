@@ -18,13 +18,45 @@
 // import React from 'react'
 // import Campaign_Form from '../../components/Campaign_Form'
 
-import UserBtn from "../../components/UserBtn"
+// import UserBtn from "../../components/UserBtn"
 
 
-function Avi() {
+// function Avi() {
+//   return (
+//     <UserBtn />
+//   )
+// }
+
+// export default Avi
+
+// import React from 'react'
+// import ListNoRead from "../../functions/GetAllLeadsNoGet"
+
+// const a = {
+//   b: "b",
+//   c: "c",
+//   e: "e",
+//   a: "a",
+//   d: "d"
+// }
+
+// const b = {
+//   b: "b",
+//   c: "c",
+//   e: "e",
+//   a: "a",
+//   d: "d"
+// }
+
+// ListNoRead(b, a)
+
+// export default Avi
+
+import React from 'react'
+export default function Avi() {
   return (
-    <UserBtn />
+    <div></div>
   )
 }
 
-export default Avi
+
