@@ -7,6 +7,7 @@ import { CampaignContext } from '../CampaignPage'
 import ListNoRead from '../../functions/GetAllLeadsNoGet'
 import MessageForm from '../../components/MessageForm'
 import { PopupContext } from '../../Context/Popup'
+import Button from '../../components/Button'
 
 export default function MessagePage() {
     const context = useContext(CampaignContext)
@@ -50,8 +51,10 @@ export default function MessagePage() {
                         <HeadLine primaryText={nameTitleMsg} scontText={dateFixMsg} icone={icone} />
                     </div>
                     <div className={style.contentDiv}>
-
                         <p className={style.contentMsg}>{MsgToPrint?.content}</p>
+                    </div>
+                    <div className={style.btn}>
+                        <Button text='שלח הודעה' option={'1'} />
                     </div>
                     <Accordion title={leadsSent}>{campaign?.leads?.map?.(i => <div key={i._id}>{i.lead.name}  </div>)}</Accordion>
                     <Accordion title={leadsNoSent}>{campaign?.leads?.map?.(i => <div key={i._id}>{i.lead.name}</div>)}</Accordion>
