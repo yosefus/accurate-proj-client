@@ -5,16 +5,18 @@ import InputText from '../InputText';
 import InputArea from '../InputArea';
 import Button from '../Button';
 import { PopupContext } from '../../Context/Popup'
+import apiReq from '../../functions/ApiReq';
 
 
-export default function LeadForm({ isUpdate, originalLead ={}, closeDailog }) {
-    
+export default function LeadForm({ isUpdate, originalLead = {}, closeDailog }) {
+
 
     const [lead, setlead] = useState({ Fname: originalLead.Fname || '', Lname: originalLead.Lname || '', email: originalLead.email || '', phone: originalLead.phone, notes: originalLead.notes || '' })
 
     console.log(lead);
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
+        await apiReq({ name: "put", path: `lead/${originalLead.id}/`, data: lead })
     }
 
     const handleChange = e => setlead(old => ({ ...old, [e.target.name]: e.target.value }))
@@ -45,7 +47,7 @@ export default function LeadForm({ isUpdate, originalLead ={}, closeDailog }) {
                     <InputArea name={'notes'} onChange={handleChange} value={lead.notes} />
                 </div>
                 <div className={`${styles.btn}`} >
-                    <Button text={'ביטול'} option={'2'} type='button' onClick={closeDailog}/>
+                    <Button text={'ביטול'} option={'2'} type='button' onClick={closeDailog} />
                     <Button text={'שמירה'} option={'1'} type="submit" />
                 </div>
             </form>
