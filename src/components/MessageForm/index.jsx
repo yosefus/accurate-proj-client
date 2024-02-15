@@ -6,19 +6,24 @@ import InputArea from '../InputArea'
 import Button from '../Button'
 import Label from '../Label'
 import { PopupContext } from '../../Context/Popup'
+import apiReq from '../../functions/ApiReq'
+import { useParams } from 'react-router-dom'
 
-export default function MessageForm({ isUpdate ,msg={} ,
-     closeDailog 
-    }) {
+export default function MessageForm({ isUpdate ,idCamp, idMessage, msg={} }) {
        
-const asdfa = useContext(PopupContext)
-console.log(asdfa);
+const {closeDailog} = useContext(PopupContext)
+console.log(idCamp);
 const [massage, setMassage] = useState({subject: msg.subject|| '', content: msg.content || ''})
 
 console.log(massage);
-const handleSubmit = (e) => {
+const handleSubmit = async (e) => {
     e.preventDefault()
+  if (!isUpdate) {await apiReq({name: 'POST', path: `campaign/${idCamp}/newMsg`,data: massage})}
+  else {await apiReq({name: 'PUT', path: `campaign/updatemsg/${idMessage}`,data: massage})} 
+  closeDailog()
 }
+
+
 
 const handleChange = e => setMassage(old => ({...old, [e.target.name]: e.target.value}))
 
@@ -39,7 +44,7 @@ const handleChange = e => setMassage(old => ({...old, [e.target.name]: e.target.
                 </div>
                 <div className={`${styles.btn}`} >
                     <Button text={'ביטול'} option={'2'} type='button' onClick={closeDailog} />
-                    <Button text={'שמירה'} option={'1'} type="submit"/>
+                    <Button text={'שמירה'} option={'1'} type="submit" />
                 </div>
             </form>
         </>

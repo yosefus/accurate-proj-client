@@ -29,7 +29,7 @@ stroke: white;
   }
   .newMsg{
     padding-top: 30px;
-    position: absolute;
+    position: sticky;
     bottom: 50px;
     border-top:solid 1px #E8E8E8 ;
     width: 400px;
