@@ -21,7 +21,7 @@ export default function LeadPage() {
         <div className={styles.all}>
             <div>
                 <HeadLine
-                    primaryText={lid.lead.name}
+                    primaryText={`${lid.lead.Fname} - ${lid.lead.Lname}`}
                     scontText={"פעיל"}
                     icone={<img src="/edit-04.svg" alt="icon" onClick={() => openDialoge({
                         comp: <LeadForm isUpdate={true} originalLead={lid.lead} toget={toget} closeDailog={closeDailog} />,
