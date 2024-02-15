@@ -11,7 +11,7 @@ const hendelChenge=(e)=>setsearchToPrint (LeadList.filter(v=>
     v.lead.Fname.includes(e.target.value) || v.lead.Lname.includes(e.target.value) ))
   return (
     <>
-      <InputSearch onChange={hendelChenge} setsearchToPrint={setsearchToPrint}  LeadList={LeadList}/>
+      <InputSearch onChange={hendelChenge}/>
       {searchToPrint.map((i) => {
         return (
           <LeadItem
