@@ -9,7 +9,8 @@ import { PopupContext } from '../../Context/Popup'
 import apiReq from '../../functions/ApiReq'
 import { useParams } from 'react-router-dom'
 
-export default function MessageForm({ isUpdate ,idCamp, idMessage, msg={} }) {
+export default function MessageForm({ isUpdate ,idCamp, idMessage, msg={} ,toget}) {
+
        
 const {closeDailog} = useContext(PopupContext)
 console.log(idCamp);
@@ -20,7 +21,8 @@ const handleSubmit = async (e) => {
     e.preventDefault()
   if (!isUpdate) {await apiReq({name: 'POST', path: `campaign/${idCamp}/newMsg`,data: massage})}
   else {await apiReq({name: 'PUT', path: `campaign/updatemsg/${idMessage}`,data: massage})} 
-  closeDailog()
+    closeDailog()
+    toget()
 }
 
 
