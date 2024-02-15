@@ -31,7 +31,7 @@ const { id } = useParams()
                     </NavLink>)
             })
             }
-            <div><NewMsg/></div>
+            <div><NewMsg idCamp ={id}/></div>
             
         </>
     )
