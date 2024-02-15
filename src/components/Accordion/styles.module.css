@@ -36,7 +36,7 @@
         -webkit-filter: blur(0);
         filter: blur(0);
         opacity: 1;
-        height: 400px;
+        height: 250px;
         overflow-y: auto;
         display: block;
     }
@@ -76,7 +76,7 @@
         -webkit-filter: blur(0);
         filter: blur(0);
         opacity: 1;
-        height: 400px;
+        height: 250px;
         overflow-y: auto;
         display: block;
     }
@@ -102,6 +102,7 @@
 
 
 .show {
+
     -webkit-animation: slide-in-blurred-top 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) forwards;
     animation: slide-in-blurred-top 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) forwards;
 }

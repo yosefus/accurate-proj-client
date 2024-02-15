@@ -9,6 +9,7 @@ import { PopupContext } from '../../Context/Popup'
 import Button from '../../components/Button'
 
 import MessageForm from '../../components/MessageForm'
+import LeadItem from '../../components/LeadItem'
 
 export default function MessagePage() {
     const context = useContext(CampaignContext)
@@ -27,7 +28,7 @@ export default function MessagePage() {
 
     const leadsRecivedMsg = MsgToPrint ? recievedMsg(MsgToPrint, campaign?.leads || []) : []
     const leadsNotRecivedMsg = MsgToPrint ? notRecievedMsg(campaign?.leads || [], leadsRecivedMsg) : []
-
+console.log({leadsNotRecivedMsg});
 
     const leadsSent = `נשלח ל ${leadsRecivedMsg?.length} נרשמים`
 
@@ -62,8 +63,15 @@ export default function MessagePage() {
                     <div className={style.btn}>
                         <Button text='שלח הודעה' option={'1'} />
                     </div>
-                    <Accordion title={leadsSent}>{campaign?.leads?.map?.(i => <div key={i._id}>{i.lead.name}  </div>)}</Accordion>
-                    <Accordion title={leadsNoSent}>{campaign?.leads?.map?.(i => <div key={i._id}>{i.lead.name}</div>)}</Accordion>
+                                      
+                    <Accordion title={leadsSent}>
+                        {leadsNotRecivedMsg?.map?.(i => <LeadItem key={i._id} name={`${i.Lname} ${i.Fname}`}></LeadItem>)}
+                        </Accordion>
+
+                        <Accordion title={leadsNoSent}>
+                        {leadsNotRecivedMsg?.map?.(i => <LeadItem key={i._id} name={`${i.Lname} ${i.Fname}`}></LeadItem>)}
+                        </Accordion>
+
                 </div>
 
             </div>
