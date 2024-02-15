@@ -8,13 +8,12 @@ export default function ListMessage({ listMessage }) {
     // listMessage should get array of objs with all information about messeages
     // to change date from listMessage to createContext 
     // id , date , 
-    
-const { id } = useParams()
+
+    const { id } = useParams()
 
 
-    return (
-        <>
-
+    return (<>
+        <div className={styles.container}>
             {listMessage.map(i => {
                 return (
                     <NavLink className={styles.linkMessage} to={`/campaign/${id}/messages/${i._id}`} key={i._id}>
@@ -25,14 +24,15 @@ const { id } = useParams()
                             </p>
                             <div>
                                 <p className={styles.name}>{i.subject}</p>
-                                <p className={styles.date}> {FormatDate(i.creationDate,true)}</p>
+                                <p className={styles.date}> {FormatDate(i.creationDate, true)}</p>
                             </div>
                         </div>
                     </NavLink>)
             })
             }
-            <div><NewMsg/></div>
-            
-        </>
+
+        </div>
+        <div className={styles.NewMsg}><NewMsg /></div>
+    </>
     )
 }

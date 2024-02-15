@@ -1,24 +1,30 @@
-.holdTabs{
+.holdTabs {
     display: flex;
-    height: 100vh;
     position: relative;
 }
-.holdTabs >div:last-child{
+
+.holdTabs>div:last-child {
     flex-grow: 1;
 }
-.holdTabs >div:first-child{
+
+.holdTabs>div:first-child {
     width: 500px;
     flex-grow: 0;
-  
 }
-.headLine{
-    padding: 50px;
+
+.headLine {
+    padding: 50px 50px 0 50px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
-.tabSwitcher{
+
+.tabSwitcher {
     margin: 35px 0;
     height: 50px;
 }
-.leftSide{
+
+.leftSide {
     max-width: 800px;
     margin: 0 auto;
 }
