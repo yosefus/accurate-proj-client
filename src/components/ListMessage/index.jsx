@@ -32,7 +32,8 @@ export default function ListMessage({ listMessage }) {
             }
 
         </div>
-        <div className={styles.NewMsg}><NewMsg /></div>
+        <div className={styles.NewMsg}><NewMsg idCamp={id} /></div>
+
     </>
     )
 }
