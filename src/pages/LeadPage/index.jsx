@@ -12,6 +12,7 @@ export default function LeadPage() {
     const { leadId } = useParams();
     const context = useContext(CampaignContext);
     const campaign = context?.campaign || {}
+    const toget = context?.toget
     const lid = campaign?.leads?.find?.(l => l.lead._id === leadId);
 
     const { openDialoge, closeDailog } = useContext(PopupContext)
@@ -23,8 +24,8 @@ export default function LeadPage() {
                     primaryText={lid.lead.name}
                     scontText={"פעיל"}
                     icone={<img src="/edit-04.svg" alt="icon" onClick={() => openDialoge({
-                        comp: <LeadForm isUpdate={true} originalLead={lid.lead} closeDailog={closeDailog} />,
-                        title: "נרשם חדש"
+                        comp: <LeadForm isUpdate={true} originalLead={lid.lead} toget={toget} closeDailog={closeDailog} />,
+                        title: "עריכת נרשם"
                     })} />}
                 />
             </div>
