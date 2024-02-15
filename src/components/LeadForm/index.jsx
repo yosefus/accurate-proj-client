@@ -8,15 +8,27 @@ import { PopupContext } from '../../Context/Popup'
 import apiReq from '../../functions/ApiReq';
 
 
-export default function LeadForm({ isUpdate, originalLead = {}, closeDailog }) {
 
+export default function LeadForm({toget, campaign = {}, isUpdate, originalLead ={}, closeDailog }) {
+    
 
     const [lead, setlead] = useState({ Fname: originalLead.Fname || '', Lname: originalLead.Lname || '', email: originalLead.email || '', phone: originalLead.phone, notes: originalLead.notes || '' })
 
-    console.log(lead);
+    console.log(lead, originalLead);
+
     const handleSubmit = async (e) => {
         e.preventDefault()
-        await apiReq({ name: "put", path: `lead/${originalLead.id}/`, data: lead })
+        if (campaign._id) {
+            let x= await apiReq({name:'post',path:`campaign/add-lead/${campaign._id}`,data:lead})
+            toget();
+            closeDailog();
+            console.log(x);
+        } else {
+            await apiReq({ name: "put", path: `lead/${originalLead._id}/`, data: lead })
+            toget();
+            closeDailog();
+            
+        }
     }
 
     const handleChange = e => setlead(old => ({ ...old, [e.target.name]: e.target.value }))
