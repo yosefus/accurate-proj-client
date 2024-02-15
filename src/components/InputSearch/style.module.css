@@ -4,6 +4,7 @@
     border-radius: var(--radius);
     width: 100%;
     height: 34px;
+    margin-bottom: 2rem;
 }
 
 .contaner{
@@ -11,4 +12,6 @@
 }
 .icon{
 position: absolute;
+left: 1%;
+top: 10%;
 }
